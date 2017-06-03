@@ -1,0 +1,13 @@
+.RightZone{
+    float:right;
+    position: relative;
+    width: 40%;
+    height: 40%;
+    font-size: 40px;
+    font-family: "微軟正黑體";
+}
+#attribute{
+    color: brown;
+    font-size: 60px;
+
+}

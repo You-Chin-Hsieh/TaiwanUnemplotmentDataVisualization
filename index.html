@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>HW2</title>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+ <svg width="50%" height="100%" viewBox="0 0 800 600"></svg>
+    <script type="text/javascript"></script>
+    <script type="text/javascript" src="http://d3js.org/topojson.v1.min.js"></script>
+    <script src="http://d3js.org/d3.v3.min.js"></script>
+ <script src = "jquery-3.2.1.min.js"></script>
+ <script src="script/fisheye.js"></script>
+ <script src = "script/loadFile.js"></script>
+ <link rel="stylesheet" href="css/style.css">
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+ <div class="RightZone">
+ <div class="bg-info" id="TextViewZone">
+<div id="county">請將滑鼠移動</div>
+     <div id="attribute">至你想要看的縣市</div>
+ </div>
+ <div class="bg-warning">
+     <div>請選擇你想看的資料類別</div>
+     <button class="btn btn-default" onclick='refresh("reigon","unemploymentPeople_thousand",["#fff77e", "#ff2628"])'>失業人數</button>
+     <button class="btn btn-default" onclick='refresh("reigon","unemploymentPeople_rate",["#fff77e", "#17990d"])'>失業率</button>
+     <button class="btn btn-default" onclick='refresh("reigon","unemploymentPeople_count",["#fff77e", "#ee21ff"])'>未參與勞動原因人數</button>
+     <button class="btn btn-default" onclick='refresh("reigon","want2work",["#fff77e", "#17990d"])'>沒有工作</button>
+     <button class="btn btn-default" onclick='refresh("reigon","education",["#fff77e", "#0f1b99"])'>學業問題</button>
+     <button class="btn btn-default" onclick='refresh("reigon","house_people",["#fff77e", "#ff001e"])'>料理家務</button>
+     <button class="btn btn-default" onclick='refresh("reigon","oldAndWeak",["#fff77e", "#ff001e"])'>高齡及身心障礙</button>
+     <button class="btn btn-default" onclick='refresh("reigon","other",["#fff77e", "#ff001e"])'>其他</button>
+ </div>
+ <div>[Hint]顏色越深代表越多人</div>
+ </div>
+</body>
+
+</html>
