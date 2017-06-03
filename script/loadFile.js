@@ -32,10 +32,10 @@ function fillColor(color,attribute){
     })
 }
 function refresh(countys,attributes,range){
-    d3.json("TaiwanUnemplotmentDataVisualization/topojson/counties.json", function(topodata) {
+    d3.json("../topojson/counties.json", function(topodata) {
         ArrayList = []
 
-        d3.csv("TaiwanUnemplotmentDataVisualization/workLessPeople.csv", function(error, data) {
+        d3.csv("workLessPeople.csv", function(error, data) {
             var min=data[0][attributes]
             var max=data[0][attributes]
 
