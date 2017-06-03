@@ -32,7 +32,7 @@ function fillColor(color,attribute){
     })
 }
 function refresh(countys,attributes,range){
-    d3.json("../topojson/counties.json", function(topodata) {
+    d3.json("counties.json", function(topodata) {
         ArrayList = []
 
         d3.csv("workLessPeople.csv", function(error, data) {
