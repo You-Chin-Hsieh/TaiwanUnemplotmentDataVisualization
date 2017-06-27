@@ -32,6 +32,7 @@ function fillColor(color,attribute){
     })
 }
 function refresh(countys,attributes,range){
+    $("svg").html("")
     d3.json("counties.json", function(topodata) {
         ArrayList = []
 
@@ -79,8 +80,7 @@ function refresh(countys,attributes,range){
 
             var w = 140, h = 400;
 
-            var key = d3.select("body").append("svg").attr("width", w).attr("height", h);
-
+            var key = d3.select("body").select("#colorZone").attr("width", w).attr("height", h);
             var legend = key.append("defs").append("svg:linearGradient").attr("id", "gradient").attr("x1", "100%").attr("y1", "0%").attr("x2", "100%").attr("y2", "100%").attr("spreadMethod", "pad");
 
             legend.append("stop").attr("offset", "0%").attr("stop-color", color(max)).attr("stop-opacity", 1);
